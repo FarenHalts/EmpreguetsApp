@@ -23,7 +23,7 @@ export default class RegisterScreen extends React.Component{
         return(
             <View style={styles.container}>
                <Text style={styles.greeting}> 
-               {'Opa, Tudo Certo?\n Faça Seu Registro Para Usufruir De Todas As Nossas Funcionalidades'}
+               {'Faça Seu Registro Para Usufruir De Todas \nAs Nossas Funcionalidades'}
                </Text>
 
                 <View style={styles.errorMessage}>
