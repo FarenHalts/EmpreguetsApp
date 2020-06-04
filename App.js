@@ -62,7 +62,7 @@ const AppTabNavigator = createBottomTabNavigator (
       Post: {
         screen: PostScreen,
         navigationOptions: {
-          tabBarIcon: ({ tintColor }) => <Ionicons name="ios-add-circle" size={24}  color={tintColor}/>
+          tabBarIcon: ({ tintColor }) => <Ionicons name="ios-calendar" size={24}  color={tintColor}/>
         }
         },
       Notification: {
