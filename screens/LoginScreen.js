@@ -1,8 +1,11 @@
 import React from 'react';
-import { View, Text, StyleSheet, ActivityIndicator, TextInput, TouchableOpacity } from 'react-native';
+import { View, Text, StyleSheet, ActivityIndicator, TextInput, TouchableOpacity , Image, StatusBar, LayoutAnimation } from 'react-native';
 import * as firebase from 'firebase'
 
 export default class LoginScreen extends React.Component{
+    static navigationOptions = {
+        header: null
+    };
     state = {
         email: "",
         password: "",
@@ -17,8 +20,15 @@ export default class LoginScreen extends React.Component{
 
     };
     render(){
+        LayoutAnimation.easeInEaseOut();
         return(
             <View style={styles.container}>
+            <StatusBar barStyle="light-content"></StatusBar>
+           {/* Ver depois */}
+            {/* <Image source={require("../assets/empregue.png")} style={{marginTop: 0, marginLeft: -50}}></Image>
+            <Image source={require("../assets/empregue.png")} style={{position: "absolute", bottom: -325, right: -225 }}></Image>
+            <Image source={require("../assets/Grupo10.png")} 
+            style={{marginTop: -110, alignSelf: "center"}}></Image> */}
                <Text style={styles.greeting}> 
                {'Bem-Vindo(a) ao Empreguets'}
                </Text>
@@ -65,6 +75,7 @@ const styles = StyleSheet.create({
         // alignItems: "center"
     },
     greeting:{
+        // marginTop: -32,
         marginTop: 32,
         fontSize: 18,
         fontWeight: "400",
