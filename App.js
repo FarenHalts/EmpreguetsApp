@@ -12,7 +12,7 @@ import MessageScreen from './screens/MessageScreen'
 import PostScreen from './screens/PostScreen'
 import NotificationScreen from './screens/NotificationScreen'
 import ProfileScreen from './screens/ProfileScreen'
-import * as firebase from 'firebase'
+// import * as firebase from 'firebase'
 
 // export default function App() {
 //   return (
@@ -31,17 +31,17 @@ import * as firebase from 'firebase'
 //   },
 // });
 
-var firebaseConfig = {
-  apiKey: "AIzaSyA5vXQEEw-gkqxpQ5QafMyRhI7xIekChd8",
-  authDomain: "react-native-firebase-7e013.firebaseapp.com",
-  databaseURL: "https://react-native-firebase-7e013.firebaseio.com",
-  projectId: "react-native-firebase-7e013",
-  storageBucket: "react-native-firebase-7e013.appspot.com",
-  messagingSenderId: "1032415524436",
-  appId: "1:1032415524436:web:d880c331ee5201b4cd5fc1",
-  measurementId: "G-JYEPFRDPGD"
-};
-firebase.initializeApp(firebaseConfig);
+// var firebaseConfig = {
+//   apiKey: "AIzaSyA5vXQEEw-gkqxpQ5QafMyRhI7xIekChd8",
+//   authDomain: "react-native-firebase-7e013.firebaseapp.com",
+//   databaseURL: "https://react-native-firebase-7e013.firebaseio.com",
+//   projectId: "react-native-firebase-7e013",
+//   storageBucket: "react-native-firebase-7e013.appspot.com",
+//   messagingSenderId: "1032415524436",
+//   appId: "1:1032415524436:web:d880c331ee5201b4cd5fc1",
+//   measurementId: "G-JYEPFRDPGD"
+// };
+// firebase.initializeApp(firebaseConfig);
 // firebase.analytics();
 
 
