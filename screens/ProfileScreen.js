@@ -40,7 +40,7 @@ export default class ProfileScreen extends React.Component {
                     </View>
                     <Text style={styles.name}>{this.state.user.name}</Text>
                 </View>
-                <View style={styles.statsContainer}>
+                {/* <View style={styles.statsContainer}>
                     <View style={styles.stat}>
                         <Text style={styles.statAmount}>21</Text>
                         <Text style={styles.statTitle}>Posts</Text>
@@ -53,13 +53,13 @@ export default class ProfileScreen extends React.Component {
                         <Text style={styles.statAmount}>63</Text>
                         <Text style={styles.statTitle}>Following</Text>
                     </View>
-                </View>
+                </View> */}
 
                 <Button
                     onPress={() => {
                         Fire.shared.signOut();
                     }}
-                    title="Log out"
+                    title="Sair"
                 />
             </View>
         );
