@@ -1,5 +1,5 @@
-import Constants from 'expo-constants';
-import * as Permissions from 'expo-permissions';
+import Constants from "expo-constants";
+import * as Permissions from "expo-permissions";
 
 class UserPermissions {
     getCameraPermission = async () => {
@@ -7,7 +7,7 @@ class UserPermissions {
             const { status } = await Permissions.askAsync(Permissions.CAMERA_ROLL);
 
             if (status != "granted") {
-                alert("Precisamos de acesso para você inserir uma imagem de perfil")
+                alert("We need permission to use your camera roll if you'd like to incude a photo.");
             }
         }
     };

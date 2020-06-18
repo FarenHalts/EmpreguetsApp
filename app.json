@@ -1,7 +1,9 @@
 {
   "expo": {
-    "name": "appEmpreguets",
-    "slug": "appEmpreguets",
+    "name": "SocialApp",
+    "slug": "SocialApp",
+    "privacy": "public",
+    "sdkVersion": "34.0.0",
     "platforms": [
       "ios",
       "android",
@@ -9,11 +11,11 @@
     ],
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/empregue.png",
+    "icon": "./assets/icon.png",
     "splash": {
-      "image": "./assets/Grupo10.png",
+      "image": "./assets/splash.png",
       "resizeMode": "contain",
-      "backgroundColor": "#2E294E"
+      "backgroundColor": "#ffffff"
     },
     "updates": {
       "fallbackToCacheTimeout": 0
