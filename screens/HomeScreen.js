@@ -1,47 +1,55 @@
 import React from "react";
-import {View, Text, StyleSheet, TouchableOpacity, LayoutAnimation, Image} from 'react-native';
-import * as firebase from 'firebase'
+import MapView from "react-native-maps";
+import { StyleSheet, Text, View, Dimensions, Permissions, Button } from "react-native";
+//import * as Permissions from 'expo-permissions';
 
-export default class HomeScreen extends React.Component{
-    // state = {
-    //     email: "",
-    //     displayName: ""
-    // };
-    // componentDidMount(){
-    //     const {email, displayName} = firebase.auth().currentUser;
-
-    //     this.setState({email, displayName});
+export default class HomeScreen extends React.Component {
+    
+     /// _getLocationAsync = async () => {
         
-    // }
-    // signOutUser = () => {
-    //     firebase.auth().signOut();
-    // };
+      //  const { status, permissions } = await Permissions.askAsync(Permissions.LOCATION);
 
-    render(){
-        LayoutAnimation.easeInEaseOut();
+      //  alert(JSON.stringify(Permissions));
+       // if (status === 'granted') {
+      //    return Location.getCurrentPositionAsync({ enableHighAccuracy: true });
+     //   } else {
+     //     throw new Error('Location permission not granted');
+      //  }
+      //}
 
-        return ( 
-            // <View style={styles.container}>
-            //     <Image source={require('../assets/log.png')} style={{marginTop: 15, width: 400, height: 400,}}></Image>
-            //     <Text style={{fontSize: 16, textAlign: "center"}}>Você está logado com segurança meu fi</Text>
-            //     <Text style={{fontSize: 16, textAlign: "center"}}>{this.state.email}</Text>
 
-            //     <TouchableOpacity style={{marginTop: 32}} onPress={this.signOutUser}>
-            //         <Text>Sair</Text>
-            //     </TouchableOpacity>
-            // </View>
-            <View style={styles.container}>
-                
-                <Text style={{fontSize: 16, textAlign: "center"}}>Tela Inicial</Text>
-            </View>
-        );
-    }
+
+//mostra na tela
+  render() {
+    return (
+      <View style={styles.container}>
+      
+
+        <MapView style={styles.mapStyle} 
+        initialRegion={{
+            latitude:-25.4284,
+            longitude:-49.2733,
+            latitudeDelta:0.1,
+            longitudeDelta:0.1,
+
+        }}
+        />
+      </View>
+    );
+  }
 }
 
 const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-    }
-})
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  mapStyle: {
+     // width: 200,
+     // height: 200
+    width: Dimensions.get('window').width,
+    height: Dimensions.get('window').height,
+  },
+});
