@@ -30,7 +30,7 @@ const AppContainer = createStackNavigator(
                 Message: {
                     screen: MessageScreen,
                     navigationOptions: {
-                        tabBarIcon: ({ tintColor }) => <Ionicons name="ios-chatboxes" size={24} color={tintColor} />
+                        tabBarIcon: ({ tintColor }) => <Ionicons name="ios-contacts" size={24} color={tintColor} />
                     }
                 },
                 // Post: {
@@ -63,8 +63,8 @@ const AppContainer = createStackNavigator(
                     }
                 },
                 tabBarOptions: {
-                    activeTintColor: "#161F3D",
-                    inactiveTintColor: "#B8BBC4",
+                    activeTintColor: "#2E294E",
+                    inactiveTintColor: "#735CDD",
                     showLabel: false
                 }
             }

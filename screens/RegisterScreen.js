@@ -42,19 +42,19 @@ export default class RegisterScreen extends React.Component {
         return (
             <View style={styles.container}>
                 <StatusBar barStyle="light-content"></StatusBar>
-                <Image
+                {/* <Image
                     source={require("../assets/authHeader.png")}
                     style={{ marginTop: -116, marginLeft: -50 }}
                 ></Image>
                 <Image
                     source={require("../assets/authFooter.png")}
                     style={{ position: "absolute", bottom: -325, right: -225 }}
-                ></Image>
+                ></Image> */}
                 <TouchableOpacity style={styles.back} onPress={() => this.props.navigation.goBack()}>
                     <Ionicons name="ios-arrow-round-back" size={32} color="#FFF"></Ionicons>
                 </TouchableOpacity>
-                <View style={{ position: "absolute", top: 64, alignItems: "center", width: "100%" }}>
-                    <Text style={styles.greeting}>{`Hello!\nSign up to get started.`}</Text>
+                <View style={{ position: "absolute", top: 50, alignItems: "center", width: "100%" }}>
+                    {/* <Text style={styles.greeting}>{`Olá!\nRegistre-se para usufruir de todas as nossas funcionalidades.`}</Text> */}
                     <TouchableOpacity style={styles.avatarPlaceholder} onPress={this.handlePickAvatar}>
                         <Image source={{ uri: this.state.user.avatar }} style={styles.avatar} />
                         <Ionicons
@@ -72,7 +72,7 @@ export default class RegisterScreen extends React.Component {
 
                 <View style={styles.form}>
                     <View>
-                        <Text style={styles.inputTitle}>Full Name</Text>
+                        <Text style={styles.inputTitle}>Nome</Text>
                         <TextInput
                             style={styles.input}
                             onChangeText={name => this.setState({ user: { ...this.state.user, name } })}
@@ -80,8 +80,8 @@ export default class RegisterScreen extends React.Component {
                         ></TextInput>
                     </View>
 
-                    <View style={{ marginTop: 32 }}>
-                        <Text style={styles.inputTitle}>Email Address</Text>
+                    <View style={{ marginTop: 5 }}>
+                        <Text style={styles.inputTitle}>Email</Text>
                         <TextInput
                             style={styles.input}
                             autoCapitalize="none"
@@ -90,8 +90,8 @@ export default class RegisterScreen extends React.Component {
                         ></TextInput>
                     </View>
 
-                    <View style={{ marginTop: 32 }}>
-                        <Text style={styles.inputTitle}>Password</Text>
+                    <View style={{ marginTop: 5 }}>
+                        <Text style={styles.inputTitle}>Senha</Text>
                         <TextInput
                             style={styles.input}
                             secureTextEntry
@@ -103,7 +103,7 @@ export default class RegisterScreen extends React.Component {
                 </View>
 
                 <TouchableOpacity style={styles.button} onPress={this.handleSignUp}>
-                    <Text style={{ color: "#FFF", fontWeight: "500" }}>Sign up</Text>
+                    <Text style={{ color: "#FFF", fontWeight: "500" }}>Registrar-se</Text>
                 </TouchableOpacity>
 
                 <TouchableOpacity
@@ -111,7 +111,7 @@ export default class RegisterScreen extends React.Component {
                     onPress={() => this.props.navigation.navigate("Login")}
                 >
                     <Text style={{ color: "#414959", fontSize: 13 }}>
-                        Already have an account? <Text style={{ fontWeight: "500", color: "#E9446A" }}>Sign in</Text>
+                        Já possui um cadastro? <Text style={{ fontWeight: "500", color: "#735CDD" }}>Login</Text>
                     </Text>
                 </TouchableOpacity>
             </View>
@@ -130,8 +130,9 @@ const styles = StyleSheet.create({
         color: "#FFF"
     },
     form: {
-        marginBottom: 48,
-        marginHorizontal: 30
+        // marginBottom: 48,
+        marginHorizontal: 30,
+        marginTop: 200
     },
     inputTitle: {
         color: "#8A8F9E",
@@ -147,7 +148,7 @@ const styles = StyleSheet.create({
     },
     button: {
         marginHorizontal: 30,
-        backgroundColor: "#E9446A",
+        backgroundColor: "#735CDD",
         borderRadius: 4,
         height: 52,
         alignItems: "center",

@@ -28,19 +28,19 @@ export default class LoginScreen extends React.Component {
         return (
             <View style={styles.container}>
                 <StatusBar barStyle="light-content"></StatusBar>
-                <Image
+                {/* <Image
                     source={require("../assets/authHeader.png")}
                     style={{ marginTop: -176, marginLeft: -50 }}
                 ></Image>
                 <Image
                     source={require("../assets/authFooter.png")}
                     style={{ position: "absolute", bottom: -325, right: -225 }}
-                ></Image>
-                <Image
+                ></Image> */}
+                {/* <Image
                     source={require("../assets/loginLogo.png")}
                     style={{ marginTop: -110, alignSelf: "center" }}
-                ></Image>
-                <Text style={styles.greeting}>{`Hello again.\nWelcome back.`}</Text>
+                ></Image> */}
+                {/* <Text style={styles.greeting}>{`Hello again.\nWelcome back.`}</Text> */}
 
                 <View style={styles.errorMessage}>
                     {this.state.errorMessage && <Text style={styles.error}>{this.state.errorMessage}</Text>}
@@ -48,7 +48,7 @@ export default class LoginScreen extends React.Component {
 
                 <View style={styles.form}>
                     <View>
-                        <Text style={styles.inputTitle}>Email Address</Text>
+                        <Text style={styles.inputTitle}>Email</Text>
                         <TextInput
                             style={styles.input}
                             autoCapitalize="none"
@@ -58,7 +58,7 @@ export default class LoginScreen extends React.Component {
                     </View>
 
                     <View style={{ marginTop: 32 }}>
-                        <Text style={styles.inputTitle}>Password</Text>
+                        <Text style={styles.inputTitle}>Senha</Text>
                         <TextInput
                             style={styles.input}
                             secureTextEntry
@@ -70,7 +70,7 @@ export default class LoginScreen extends React.Component {
                 </View>
 
                 <TouchableOpacity style={styles.button} onPress={this.handleLogin}>
-                    <Text style={{ color: "#FFF", fontWeight: "500" }}>Sign in</Text>
+                    <Text style={{ color: "#FFF", fontWeight: "500" }}>Login</Text>
                 </TouchableOpacity>
 
                 <TouchableOpacity
@@ -78,7 +78,7 @@ export default class LoginScreen extends React.Component {
                     onPress={() => this.props.navigation.navigate("Register")}
                 >
                     <Text style={{ color: "#414959", fontSize: 13 }}>
-                        New to SocialApp? <Text style={{ fontWeight: "500", color: "#E9446A" }}>Sign up</Text>
+                        Se ainda não tem um cadastro <Text style={{ fontWeight: "500", color: "#735CDD" }}>Registre-se</Text>
                     </Text>
                 </TouchableOpacity>
             </View>
@@ -114,7 +114,7 @@ const styles = StyleSheet.create({
     },
     button: {
         marginHorizontal: 30,
-        backgroundColor: "#E9446A",
+        backgroundColor: "#735CDD",
         borderRadius: 4,
         height: 52,
         alignItems: "center",
