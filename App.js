@@ -15,6 +15,8 @@ import PostScreen from "./screens/PostScreen";
 import NotificationScreen from "./screens/NotificationScreen";
 import ProfileScreen from "./screens/ProfileScreen";
 
+import ignoreWarnings from 'react-native-ignore-warnings';
+
 const AppContainer = createStackNavigator(
     {
         default: createBottomTabNavigator(
@@ -78,10 +80,25 @@ const AppContainer = createStackNavigator(
     }
 );
 
+ignoreWarnings([
+    'Watch your six',
+    'Mind the gap',
+    'Beware the ides of March'
+  ]);
+  
+  ignoreWarnings('error', [
+    'The house is on fire',
+    'System failure'
+  ]);
+  
+  ignoreWarnings('log', 'Hello, world');
+
 const AuthStack = createStackNavigator({
     Login: LoginScreen,
     Register: RegisterScreen
 });
+
+console.disableYellowBox = true;
 
 export default createAppContainer(
     createSwitchNavigator(
